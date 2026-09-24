@@ -1,13 +1,17 @@
+import { Footer } from "./components/Footer"
 import { Navbar } from "./components/Navbar"
 
 function App() {
  
 
   return (
-    <>
+    <section className="min-h-screen flex flex-col">
      <Navbar/>
-      <h1 className="text-emerald-600 bg-black">Hola</h1>
-    </>
+     <main className="grow">
+      <h1 className="text-emerald-600">Hola</h1>
+     </main>
+      <Footer/>
+    </section>
   )
 }
 
