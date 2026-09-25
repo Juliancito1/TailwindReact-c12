@@ -19,7 +19,9 @@ export const Formulario = () => {
             <option value="otros">Otros</option>
           </select>
         </div>
-        <button className="bg-cyan-800 text-white p-2 rounded-xl text-sm mt-2">Enviar Datos</button>
+        <div className="flex justify-end">
+        <button className="bg-cyan-800 text-white p-2 rounded-xl text-sm mt-2 cursor-pointer">Enviar Datos</button>
+        </div>
       </form>
     </div>
   );
