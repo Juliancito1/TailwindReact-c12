@@ -1,6 +1,6 @@
 export const Formulario = () => {
   return (
-    <div className="bg-slate-300 container mx-auto rounded-xl mt-4 max-w-3xl">
+    <div className="bg-slate-300 container mx-auto rounded-xl mt-4 max-w-96 md:max-w-2xl lg:max-w-3xl">
       <form className="p-5">
         <div className="mb-3">
           <label htmlFor="nombre" className="text-xl text-cyan-800 font-bold">Nombre Pelicula</label>
