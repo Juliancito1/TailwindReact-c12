@@ -4,15 +4,15 @@ export const Formulario = () => {
       <form className="p-5">
         <div className="mb-3">
           <label htmlFor="nombre" className="text-xl text-cyan-800 font-bold">Nombre Pelicula</label>
-          <input className="bg-white block rounded w-full text-lg ps-1" placeholder="Ej: Iron Man" type="text" name="nombre" id="nombre" />
+          <input className="bg-white block focus:outline-2 rounded w-full text-lg ps-1" placeholder="Ej: Iron Man" type="text" name="nombre" id="nombre" />
         </div>
         <div className="mb-3">
           <label htmlFor="descripcion" className="text-xl text-cyan-800 font-bold">Descripcion</label>
-          <textarea className="bg-white block rounded w-full resize-none text-lg ps-1" placeholder="Resumen de la peli..." name="descripcion" id="descripcion"></textarea>
+          <textarea className="bg-white block rounded w-full focus:outline-2 resize-none text-lg ps-1" placeholder="Resumen de la peli..." name="descripcion" id="descripcion"></textarea>
         </div>
         <div className="mb-3">
           <label htmlFor="categoria" className="text-xl text-cyan-800 font-bold">Categoria</label>
-          <select className="bg-white block w-full text-lg rounded" name="categoria" id="categoria">
+          <select className="bg-white block w-full text-lg rounded focus:outline-2 mt-1" name="categoria" id="categoria">
             <option value="">Selecciona una Categoria</option>
             <option value="accion">Accion</option>
             <option value="comedia">Comedia</option>
