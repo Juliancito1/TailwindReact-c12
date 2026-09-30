@@ -1,26 +1,58 @@
 export const Formulario = () => {
   return (
-    <div className="bg-slate-300 container mx-auto rounded-xl mt-4 max-w-96 md:max-w-2xl lg:max-w-3xl">
-      <form className="p-5">
+    <div className="container mx-auto mt-4 max-w-96 rounded-xl bg-slate-300 md:max-w-2xl lg:max-w-3xl">
+      <form className="space-y-4 p-5">
         <div className="mb-3">
-          <label htmlFor="nombre" className="text-xl text-cyan-800 font-bold">Nombre Pelicula</label>
-          <input className="bg-white block focus:outline-2 rounded w-full text-lg ps-1" placeholder="Ej: Iron Man" type="text" name="nombre" id="nombre" />
+          <label htmlFor="nombre" className="text-xl font-bold text-cyan-800">
+            Nombre Película
+          </label>
+          <input
+            className="block w-full rounded bg-white px-2 py-2 text-lg focus:outline-2 focus:outline-cyan-800"
+            placeholder="Ej: Iron Man"
+            type="text"
+            name="nombre"
+            id="nombre"
+          />
         </div>
         <div className="mb-3">
-          <label htmlFor="descripcion" className="text-xl text-cyan-800 font-bold">Descripcion</label>
-          <textarea className="bg-white block rounded w-full focus:outline-2 resize-none text-lg ps-1" placeholder="Resumen de la peli..." name="descripcion" id="descripcion"></textarea>
+          <label
+            htmlFor="descripcion"
+            className="text-xl font-bold text-cyan-800"
+          >
+            Descripción
+          </label>
+          <textarea
+            className="block w-full resize-none rounded bg-white px-2 py-2 text-lg focus:outline-2 focus:outline-cyan-800"
+            placeholder="Resumen de la peli..."
+            name="descripcion"
+            id="descripcion"
+          />
         </div>
         <div className="mb-3">
-          <label htmlFor="categoria" className="text-xl text-cyan-800 font-bold">Categoria</label>
-          <select className="bg-white block w-full text-lg rounded focus:outline-2 mt-1" name="categoria" id="categoria">
+          <label
+            htmlFor="categoria"
+            className="text-xl font-bold text-cyan-800"
+          >
+            Categoría
+          </label>
+          <select
+            className="mt-1 block w-full rounded bg-white px-2 py-2 text-lg focus:outline-2 focus:outline-cyan-800"
+            name="categoria"
+            id="categoria"
+          >
             <option value="">Selecciona una Categoria</option>
             <option value="accion">Accion</option>
             <option value="comedia">Comedia</option>
             <option value="otros">Otros</option>
           </select>
         </div>
-        <div className="flex justify-end">
-        <button className="bg-cyan-800 text-white p-2 rounded-xl text-sm mt-2 cursor-pointer">Enviar Datos</button>
+        <div className="flex justify-end gap-2">
+          <button
+            type="submit"
+            className="mt-2 cursor-pointer rounded-xl bg-cyan-800 p-2 text-sm text-white hover:bg-cyan-700"
+          >
+            Añadir pelicula
+          </button>
         </div>
       </form>
     </div>
