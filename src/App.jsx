@@ -1,13 +1,13 @@
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
-import { Contacto } from "./pages/Contacto";
+import { Login } from "./pages/Login";
 
 function App() {
   return (
     <section className="min-h-screen flex flex-col">
       <Navbar />
       <main className="grow">
-        <Contacto />
+        <Login />
       </main>
       <Footer />
     </section>
