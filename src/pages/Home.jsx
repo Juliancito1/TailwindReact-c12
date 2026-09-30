@@ -3,7 +3,7 @@ import { Card } from "../components/Card";
 export const Home = () => {
   return (
     <div className="pb-8">
-      <section className="relative mx-auto min-h-72  overflow-hidden mt-4 bg-slate-900 md:min-h-96">
+      <section className="relative mx-auto min-h-72  overflow-hidden bg-slate-900 md:min-h-96">
         <img
           src="https://cdn.mobygames.com/1eb28760-ac06-11ed-a599-02420a000132.webp"
           alt="Escena destacada de una película"
