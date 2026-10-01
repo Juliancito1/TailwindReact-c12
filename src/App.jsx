@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { Contacto } from "./pages/Contacto";
 import { Login } from "./pages/Login";
 import { Registro } from "./pages/Registro";
+import { Error404 } from "./pages/Error404";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/iniciosesion" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/*" element={<Error404/>}/>
         </Routes>
       </main>
       <Footer />
