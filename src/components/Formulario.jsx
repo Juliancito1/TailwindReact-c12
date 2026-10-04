@@ -3,8 +3,8 @@ export const Formulario = () => {
     <div className="container mx-auto mt-4 max-w-96 rounded-xl bg-slate-300 md:max-w-2xl lg:max-w-3xl">
       <form className="space-y-4 p-5">
         <div className="mb-3">
-          <label htmlFor="nombre" className="text-xl font-bold text-cyan-800">
-            Titulo de .a película
+          <label htmlFor="titulo" className="text-xl font-bold text-cyan-800">
+            Titulo de la película
           </label>
           <input
             className="block w-full rounded bg-white px-2 py-2 text-lg focus:outline-2 focus:outline-cyan-800"
