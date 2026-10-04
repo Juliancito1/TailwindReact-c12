@@ -7,6 +7,7 @@ import { Contacto } from "./pages/Contacto";
 import { Login } from "./pages/Login";
 import { Registro } from "./pages/Registro";
 import { Error404 } from "./pages/Error404";
+import { DetallePelicula } from "./pages/DetallePelicula";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main className="grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/detallepelicula/:id" element={<DetallePelicula/>}/>
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/iniciosesion" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
