@@ -1,4 +1,5 @@
 import { Card } from "../components/Card";
+import { peliculas } from "../data/peliculas";
 
 export const Home = () => {
   return (
@@ -37,8 +38,10 @@ export const Home = () => {
             Historias preparadas para acompañar tu próxima sesión de cine.
           </p>
         </div>
-        <div className="flex justify-center">
-        <Card />
+        <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {peliculas.map((pelicula) => (
+            <Card key={pelicula.id} pelicula={pelicula} />
+          ))}
         </div>
       </section>
     </div>
