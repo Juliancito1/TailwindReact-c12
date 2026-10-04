@@ -1,28 +1,32 @@
+import { useState } from "react";
 import { Formulario } from "../components/Formulario";
 import { peliculas } from "../data/peliculas";
 
 export const Admin = () => {
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+
   return (
-    <section className="container mx-auto max-w-6xl px-4 py-8 md:py-12">
-      <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+    <section>
+      <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
-          <p className="font-mono text-sm uppercase tracking-widest text-cyan-500">
-            Panel de administración
-          </p>
-          <h1 className="mt-2 text-3xl font-bold text-white">
+          <h2 className="text-2xl font-bold text-white">
             Películas cargadas
-          </h1>
-          <p className="mt-2 text-lg text-slate-700">
+          </h2>
+          <p className="mt-2 text-slate-300">
             Gestiona la colección de películas.
           </p>
         </div>
         <button
           type="button"
-          className="rounded-xl bg-cyan-800 px-4 py-3 font-bold text-white hover:bg-cyan-700"
+          onClick={() => setMostrarFormulario((mostrar) => !mostrar)}
+          aria-expanded={mostrarFormulario}
+          className="rounded-xl bg-cyan-800 px-4 py-3 font-bold text-white transition hover:bg-cyan-700"
         >
-          + Agregar película
+          {mostrarFormulario ? "Cerrar formulario" : "+ Agregar película"}
         </button>
       </div>
+
+      {mostrarFormulario && <Formulario />}
 
       <div className="overflow-x-auto rounded-xl bg-slate-300 p-3 shadow-md md:p-5">
         <table className="w-full min-w-162.5 text-left">
@@ -48,22 +52,24 @@ export const Admin = () => {
                     {pelicula.descripcion}
                   </div>
                 </td>
-                <td className="px-3 py-4 capitalize text-slate-700">
+                <td className="px-3 py-4 text-slate-700">
                   {pelicula.genero}
                 </td>
-                <td className="space-x-2 px-3 py-4 flex justify-end gap-2">
-                  <button
-                    type="button"
-                    className="rounded-lg bg-cyan-800 px-3 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-                  >
-                    Editar
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-lg bg-slate-700 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-900"
-                  >
-                    Borrar
-                  </button>
+                <td className="px-3 py-4">
+                  <div className="flex justify-end gap-2">
+                    <button
+                      type="button"
+                      className="rounded-lg bg-cyan-800 px-3 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
+                    >
+                      Editar
+                    </button>
+                    <button
+                      type="button"
+                      className="rounded-lg bg-slate-700 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-900"
+                    >
+                      Borrar
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

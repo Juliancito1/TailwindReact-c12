@@ -8,6 +8,8 @@ import { Login } from "./pages/Login";
 import { Registro } from "./pages/Registro";
 import { Error404 } from "./pages/Error404";
 import { DetallePelicula } from "./pages/DetallePelicula";
+import { Dashboard } from "./components/Dashboard";
+import { AdminUsuarios } from "./pages/AdminUsuarios";
 
 function App() {
   return (
@@ -20,7 +22,10 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/iniciosesion" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<Dashboard />}>
+            <Route index element={<Admin />} />
+            <Route path="usuarios" element={<AdminUsuarios />} />
+          </Route>
           <Route path="/*" element={<Error404/>}/>
         </Routes>
       </main>
