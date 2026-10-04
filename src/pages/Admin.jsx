@@ -2,8 +2,6 @@ import { Formulario } from "../components/Formulario";
 import { peliculas } from "../data/peliculas";
 
 export const Admin = () => {
-
-
   return (
     <section className="container mx-auto max-w-6xl px-4 py-8 md:py-12">
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
@@ -25,7 +23,6 @@ export const Admin = () => {
           + Agregar película
         </button>
       </div>
-      <Formulario/>
 
       <div className="overflow-x-auto rounded-xl bg-slate-300 p-3 shadow-md md:p-5">
         <table className="w-full min-w-162.5 text-left">
