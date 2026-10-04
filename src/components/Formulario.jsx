@@ -30,19 +30,21 @@ export const Formulario = () => {
         </div>
         <div className="mb-3">
           <label
-            htmlFor="categoria"
+            htmlFor="genero"
             className="text-xl font-bold text-cyan-800"
           >
-            Categoría
+            Género
           </label>
           <select
             className="mt-1 block w-full rounded bg-white px-2 py-2 text-lg focus:outline-2 focus:outline-cyan-800"
-            name="categoria"
-            id="categoria"
+            name="genero"
+            id="genero"
           >
-            <option value="">Selecciona una Categoria</option>
+            <option value="">Selecciona un Género</option>
             <option value="accion">Accion</option>
             <option value="comedia">Comedia</option>
+            <option value="animacion">Animación</option>
+            <option value="fantasia">Fantasía</option>
             <option value="otros">Otros</option>
           </select>
         </div>
