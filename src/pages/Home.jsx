@@ -31,10 +31,10 @@ export const Home = () => {
           <p className="font-mono text-sm uppercase tracking-widest text-cyan-500">
             Selección de la semana
           </p>
-          <h2 className="mt-2 text-3xl font-bold text-white">
+          <h2 className="mt-2 text-3xl font-bold text-black dark:text-white">
             Películas destacadas
           </h2>
-          <p className="mt-2 text-lg text-slate-300">
+          <p className="mt-2 text-lg dark:text-slate-300">
             Historias preparadas para acompañar tu próxima sesión de cine.
           </p>
         </div>

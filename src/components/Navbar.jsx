@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import { NavLink } from "react-router";
+import { TemaContext } from "../context/TemaProvider";
 
 export const Navbar = () => {
+  const { tema, toggleTheme } = useContext(TemaContext);
+
+  console.log(tema);
+
   return (
     <header className="text-center bg-cyan-600 py-4">
       <nav className="flex flex-col md:flex-row justify-between items-center">
@@ -35,6 +41,12 @@ export const Navbar = () => {
           >
             Registrarse
           </NavLink>
+          <button
+            className="p-2 bg-slate-900 rounded-lg mx-2 hover:cursor-pointer hover:bg-slate-500 transition-colors duration-300"
+            onClick={toggleTheme}
+          >
+            {tema === "light" ? <>🌙</> : <>☀</>}
+          </button>
         </div>
       </nav>
     </header>

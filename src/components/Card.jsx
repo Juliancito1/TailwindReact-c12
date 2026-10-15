@@ -2,18 +2,18 @@ import { NavLink } from "react-router";
 
 export const Card = ({ pelicula }) => {
   return (
-    <article className="my-4 max-w-80 overflow-hidden rounded-2xl bg-cyan-500 text-slate-950 shadow-lg">
+    <article className="my-4 max-w-80 overflow-hidden rounded-2xl bg-slate-900 dark:bg-cyan-500 text-slate-950 shadow-lg">
       <img
         src={pelicula.imagen}
         alt={`Póster de ${pelicula.titulo}`}
         className="h-56 w-full object-cover"
       />
       <div className="p-4">
-        <p className="font-mono text-sm text-cyan-950">
+        <p className="font-mono text-sm text-white dark:text-cyan-950">
           {pelicula.anio} · {pelicula.genero}
         </p>
-        <h3 className="mt-1 text-xl font-bold">{pelicula.titulo}</h3>
-        <p className="mt-2 line-clamp-3 text-base">{pelicula.descripcion}</p>
+        <h3 className="mt-1 text-xl text-white font-bold">{pelicula.titulo}</h3>
+        <p className="mt-2 line-clamp-3 text-base text-white">{pelicula.descripcion}</p>
         <div className="mt-4 flex justify-end">
           <NavLink
             to={`/detallepelicula/${pelicula.id}`}
